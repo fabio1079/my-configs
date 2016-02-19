@@ -1,0 +1,7 @@
+[color]
+	ui = true
+[user]
+	name = Fabio Teixeira
+	email = fabio1079@gmail.com
+[core]
+	editor = vim
