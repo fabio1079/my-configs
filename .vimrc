@@ -46,6 +46,8 @@ filetype plugin indent on    " required
 " My plugins
 Plugin 'scrooloose/nerdtree'
 Plugin 'mattn/emmet-vim'
+Plugin 'sickill/vim-monokai'
+Plugin 'vim-airline/vim-airline'
 
 " Config for NERDTree
 autocmd StdinReadPre * let s:std_in=1
@@ -54,4 +56,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Set white spaces to RED
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
+
+colorscheme monokai
 
