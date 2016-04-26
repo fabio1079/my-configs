@@ -1,9 +1,18 @@
 syntax on "syntax highlight
 set nu "numeracao de linhas
-set ts=2 "Seta onde o tab para
-set sw=2 "largura do tab
-set et "espacos em vez de tab
 set paste
+
+" Condition to Makefile
+let _curfile = expand("%.t")
+" TODO: replace this condition with a regex
+if _curfile =~ "Makefile" || _curfile =~ "makefile" || _curfile =~ ".*\.mk"
+  set noexpandtab
+else
+  set ts=2 "Seta onde o tab para
+  set sw=2 "largura do tab
+  set et "espacos em vez de tab
+  set showmatch
+endif
 
 "Show whote spaces as red
 highlight ExtraWhitespace ctermbg=red guibg=red
