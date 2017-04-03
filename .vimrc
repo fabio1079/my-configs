@@ -54,5 +54,8 @@ Plugin 'bronson/vim-trailing-whitespace'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
+" Use ctrl+n to toggle nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 colorscheme monokai
 
