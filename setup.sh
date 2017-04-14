@@ -10,3 +10,6 @@ vim -c "PluginInstall"
 mkdir ~/.vim/colors
 cp ~/.vim/bundle/vim-monokai/colors/monokai.vim ~/.vim/colors/monokai.vim
 
+cp .bash_config ~/.bash_config
+echo "source .bash_config" >> ~/.bashrc
+
