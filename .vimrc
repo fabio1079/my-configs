@@ -49,6 +49,7 @@ Plugin 'mattn/emmet-vim'
 Plugin 'sickill/vim-monokai'
 Plugin 'vim-airline/vim-airline'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'easymotion/vim-easymotion'
 
 " Config for NERDTree
 autocmd StdinReadPre * let s:std_in=1
@@ -58,4 +59,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 
 colorscheme monokai
+
+let g:EasyMotion_do_mapping = 0
+nmap s <Plug>(easymotion-overwin-f)
+let g:EasyMotion_smartcase = 1
 
