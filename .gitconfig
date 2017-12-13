@@ -5,3 +5,5 @@
 	email = fabio1079@gmail.com
 [core]
 	editor = vim
+[alias]
+  we-have-to-go-back = !git add -A && git commit -m 'byebye' && git reset HEAD~1 --hard
