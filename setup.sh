@@ -1,14 +1,20 @@
 #!/bin/bash
 
 cp .gitconfig ~
-cp .vimrc ~
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+function setup_neovim() {
+  mkdir -p ~/.config/nvim
+  cp init.vim ~/.config/nvim/
 
-vim -c "PluginInstall"
+  sudo apt-get install neovim
 
-mkdir ~/.vim/colors
-cp ~/.vim/bundle/vim-monokai/colors/monokai.vim ~/.vim/colors/monokai.vim
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  nvim -c ":PlugInstall"
+}
+
+setup_neovim
 
 cp .bash_config ~/.bash_config
 echo "source ~/.bash_config" >> ~/.bashrc

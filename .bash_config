@@ -10,3 +10,6 @@ function show_colored_git_branch_in_prompt() {
 
 show_colored_git_branch_in_prompt
 
+alias doki="sudo docker images $@"
+alias sdc="sudo docker-compose $@"
+
